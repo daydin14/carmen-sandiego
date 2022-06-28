@@ -26,6 +26,12 @@ ORDER BY population;
 -- nearby country speaks nothing but that language.
 
 -- Write SQL query here
+SELECT code, name, population, percentage
+FROM country
+    LEFT JOIN countrylanguage ON country.code=countrylanguage.countrycode
+WHERE region='Southern Europe' AND language='Italian' AND percentage='100'
+ORDER BY population;
+--Query Top Response: SMR | San Marino | 27000 | 100
 
 
 -- Clue #4: We're booking the first flight out – maybe we've actually got a chance to catch her this time.
