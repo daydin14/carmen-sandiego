@@ -40,7 +40,12 @@ ORDER BY population;
 -- be flying to.
 
 -- Write SQL query here
-
+SELECT *
+FROM country
+    LEFT JOIN countrylanguage ON country.code=countrylanguage.countrycode
+WHERE region='Southern Europe' AND language='Italian' AND percentage='100' AND name=localname
+ORDER BY population;
+-- Same Top Query Response as above.
 
 -- Clue #5: Oh no, she pulled a switch – there are two cities with very similar names, but in totally different
 -- parts of the globe! She's headed to South America as we speak; go find a city whose name is like the one we were
