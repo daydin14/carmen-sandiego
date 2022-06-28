@@ -14,7 +14,12 @@ ORDER BY population;
 -- spoken in this country, so we can call in a translator to work with you.
 
 -- Write SQL query here
-
+SELECT code, name, region, population, language
+FROM country
+    LEFT JOIN countrylanguage ON country.code=countrylanguage.countrycode
+WHERE region='Southern Europe'
+ORDER BY population;
+-- Same Top Query Response as above.
 
 -- Clue #3: We have new news on the classes Carmen attended – our gumshoes tell us she's moved on
 -- to a different country, a country where people speak only the language she was learning. Find out which
